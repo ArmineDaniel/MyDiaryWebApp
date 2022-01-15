@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MyDiaryWebApp.Models.Diaries>
+
+
+<form asp-action="DiaryOfBase" asp-controller="Account" asp-anti-forgery="true">
+    <div>
+
+        <table class="table">
+            <tr><td>Date of note</td><td>Text</td></tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => item.DateOfDiary) </td>
+                    <td><textarea style="width:850px; height:500px;"> @Html.DisplayFor(modelItem => item.TextOfDiary) </textarea></td>
+                </tr>
+            }
+           
+        </table>
+    </div>
+
+</form>
+<form asp-action="RemoveDiary" asp-controller="Account" asp-anti-forgery="true">
+    <div>
+        <input type="submit" value="Delete" class="btn btn-outline-dark" />
+    </div>
+</form>
+
+
+@*<form asp-action="EditDiary" asp-controller="Account" asp-anti-forgery="true">
+    <div>
+        <input type="submit" value="Save" class="btn btn-outline-dark" />
+    </div>
+</form>*@
+
+
+
+
+

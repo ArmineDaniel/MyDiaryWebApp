@@ -1,0 +1,16 @@
+﻿@model MyDiaryWebApp.ViewModels.NoteModel
+
+<form asp-action="Note" asp-controller="Account" asp-anti-forgery="true">
+    <div style="text-align:center">
+        <div>
+            <label>Date of note: </label>
+            <input type="date" asp-for="DateOfDiary" id="DateOfDiary" value="" />
+
+        </div>
+        <span asp-validation-for="DateOfDiary"></span>
+        <div>
+            <input type="submit" value="GO!" class="btn btn-outline-dark" />
+        </div>
+    </div>
+</form>
+

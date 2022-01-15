@@ -1,0 +1,15 @@
+﻿@model MyDiaryWebApp.ViewModels.DiaryModel
+
+<form asp-action="Diary" asp-controller="Account" asp-anti-forgery="true">
+    <div style="text-align:center">
+        <div>
+            <h2>Date of note:</h2>           
+        </div>
+        <div>
+            <textarea id="textdiary" style="width:850px; height:500px;" asp-for="TextOfDiary"></textarea>
+            </div>
+        <div>
+            <input type="submit" value="Save" class="btn btn-outline-dark" />
+        </div>
+    </div>
+</form>
